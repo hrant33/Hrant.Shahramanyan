@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        canvas {
+            display: block;
+            margin: 0 auto;
+        }
+
+        div {
+            display: inline-block;
+        }
+
+        h1 {
+            padding: 20px;
+            text-align: center;
+        }
+
+        body {
+            font-family: 'Noto Sans', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <h1>Ծրագրավորում III Ստեփանակերտ</h1>
+            </tr>
+            <tr>
+                <h1>Հրանտ Շահրամանյան</h1>
+            </tr>
+            <tr>
+                <td>Եղանակ</td>
+                <td id="weather" ></td>
+            </tr>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Գույն</th>
+                <th scope="col">Նկարագրություն</th>
+                <th scope="col">Ծնվել է</th>
+                <th scope="col">Այս պահին կա</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <th scope="row">1</th>
+                <td scope="row" style="background-color:#875c1c;"></td>
+                <td>Ազատ տարածություն:</td>
+            </tr>
+            <tr>
+                   
+                <th scope="row">2</th>
+                <td scope="row" style="background-color:#009900;"></td>
+                <td>Սա խոտն է, որը տարածվում է 8 ցիկլը մեկ, տարբեր ուղղություններով:</td>c
+                <td id="grassCount"></td>
+                <td id="grassLiveCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td scope="row" style="background-color:#D9DDDC"></td>
+                <td>Սա խոտակերն է, որը ունի 50 կյանք, ուտում է խոտ:Ամեն անգամ խոտ ուտելուց նրա կյանքերի թիվը ավելանում է 1-ով ,եթե նրա կյանքը մեծ կամ հավասար լինի 55-ից և նա խոտ ուտի ապա նա կբազմանա: Նա շարժվում է ազատ վանդակներով: Եթե 50 քայլի ընթացքում խոտ չուտի նա կմահանա: </td>
+                <td id="grassEaterCount"></td>
+                <td id="grassEaterLiveCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td scope="row" style="background-color:#003399;"></td>
+                <td>Սա գիշատիչն է, որը ունի 100 կյանք, ուտում է խոտակերին:Ամեն անգամ խոտակեր ուտելուց նրա կյանքերի թիվը ավելանում է 1-ով ,եթե նրա կյանքը մեծ կամ հավասար լինի 80-ից և նա խոտակեր ուտի ապա նա կբազմանա: Նա շարժվում է ազատ վանդակներով և խոտի վրայով: Եթե 100 քայլի ընթացքում խոտակեր չուտի նա կմահանա:</td> 
+                <td id="huntCount"></td>
+                <td id="huntLiveCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td scope="row" style="background-color:#00ccff;"></td>
+                <td>Սա ջուրն է, որը տարածվում է ազատ վանդակներում, և եթե նրա մեջ ընկնեն խոտակերները կամ գիշատիչները ապա նրանք կմահանան: Եթե ջրի քանակությունը հասնում է 100-ի ապա նրա մեջ կառաջանան 5 հատ ձուկ: </td>
+                <td id="waterCount"></td>
+                <td id="waterLiveCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td scope="row" style="background-color:#ffcc00;"></td>
+                <td>Սա ձուկն է, որը շարժվում է ջրի վրայով: </td>
+                <td id="fishCount"></td>
+                <td id="fishLiveCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">7</th>
+                <td scope="row" style="background-color:#ff6608;"></td>
+                <td>Սա ամենակերն է, որը ունի 50 կյանք, և ուտում է խոտին, խոտակերին և գիշատիչին:Ամեն անգամ  ուտելուց նրա կյանքերի թիվը ավելանում է 1-ով ,եթե նրա կյանքը մեծ կամ հավասար լինի 80-ից և նա ուտի ապա նա կբազմանա: Նա շարժվում է ազատ վանդակներով : Եթե 50 քայլի ընթացքում չուտի նա կմահանա:  </td>
+                <td id="amenakerCount"></td>
+                <td id="amenakerLiveCount"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="p5.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

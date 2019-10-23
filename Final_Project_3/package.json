@@ -1,0 +1,17 @@
+{
+  "name": "final_project",
+  "version": "1.0.0",
+  "main": "class.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "1. կիսում ենք մոդուլների և դնում modules ֆոլդերի մեջ\r 2․ տեղափոխում եք լօգիկան server.js-ի մեջ"
+}
